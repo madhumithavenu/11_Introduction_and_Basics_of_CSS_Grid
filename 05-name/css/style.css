@@ -44,33 +44,61 @@ img {
 }
 
 
-
 .media-container {
-    margin: 0 auto;
+    /* margin: 0 auto;
     max-width: 800px;
 
     display: grid;
     grid-template-areas: 
     "title title title title"
     "image desc desc desc";
-    grid-gap: 1rem;
+    grid-gap: 1rem; */
+
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+        "title"
+        "tagline"
+        "info"
+        "image"
+        "entry"
 }
 
+@media (min-width:480px) {
+    .media-container {
+        max-width: 800px;
+        margin: 0 auto;
+        grid-template-areas:
+            "title title"
+            "image tagline"
+            "image info"
+            "entry entry"
+    }
+}
 
 .site-title {
-   grid-area: title;
-   text-align: center;
+    /* grid-area: title;
+   text-align: center; */
+    grid-area: title;
 }
+
 .tagline {
+    grid-area: tagline;
 }
 
 .image {
+    /* grid-area: image; */
     grid-area: image;
 }
-.description{
-    grid-area: desc;
-}
+
+/* .description{
+     grid-area: desc;
+} */
 .info {
+    grid-area: info;
 }
+
 .entry {
+    grid-area: entry;
 }
